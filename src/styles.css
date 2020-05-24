@@ -1,0 +1,32 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+  position: relative;
+  box-sizing: border-box;
+  color: #5a5757;
+}
+.info {
+  font-weight: 500;
+}
+
+.card {
+  background-color: antiquewhite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 400;
+  color: #666d6d;
+}
+
+.button-layout {
+  text-transform: capitalize;
+  background: #0c62ff;
+  cursor: pointer;
+  padding: 10px;
+  margin: 0 200px;
+  border-radius: 3px;
+  border: 1px solid gray;
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+  color: #dcdada;
+}
