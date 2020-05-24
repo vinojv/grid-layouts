@@ -1,8 +1,8 @@
 import * as React from "react";
 import { Responsive as ResponsiveGridLayout } from "react-grid-layout";
 import { isEqual } from "lodash";
-import "/node_modules/react-grid-layout/css/styles.css";
-import "/node_modules/react-resizable/css/styles.css";
+// import "/node_modules/react-grid-layout/css/styles.css";
+// import "/node_modules/react-resizable/css/styles.css";
 import "./styles.css";
 
 const getLayoutsFromSomewhere = (): ReactGridLayout.Layouts => {
@@ -104,10 +104,10 @@ class MyResponsiveGrid extends React.Component {
           className="layout"
           width={w}
           autoSize
-          onBreakpointChange={(bp, newCol) => {
+          onBreakpointChange={bp => {
             console.log(bp);
             this.setState({
-              layout: bp
+              layoutSize: bp
             });
           }}
           containerPadding={[30, 30]}
@@ -122,7 +122,6 @@ class MyResponsiveGrid extends React.Component {
             layout: ReactGridLayout.Layout,
             alllayout: ReactGridLayout.Layouts
           ): void => {
-            console.log(layout, alllayout);
             const newLayouts = alllayout;
             if (this.changeItem) {
               ["lg", "md", "sm", "xs"].forEach(size => {
